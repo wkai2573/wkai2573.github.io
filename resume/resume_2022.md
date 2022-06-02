@@ -16,11 +16,6 @@
 >
 >>後端(PHP)：前端請求回傳、每日早上自動手機通知良率、數據分析在此計算。
 >
->![良率手機1](img/yield_app_cell.jpg)
->![excel](img/yield_excel.jpg)
->![流程圖](img/yield_mockup.jpg)
->![web](img/yield_web.jpg)
->
 >還有其他許多專案，因此專案自己開發所涵蓋的技術面比較多，所以提出介紹。
 
 
@@ -29,9 +24,6 @@
 >這是與一位在接案朋友一起做的，主要接案為朋友，我則與他一起開發。
 >
 >我們開發前端APP，API文件、後端則是由其他外包單位製作。
->
->![長德_首頁](img/changde_home.jpg)
->![長德_題目頁](img/changde_topic.jpg)
 
 
 
