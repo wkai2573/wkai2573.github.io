@@ -70,7 +70,7 @@ ___
 >使用過MySQL、MSSQL、Oracle、SQLite，對任一關聯性資料庫，CRUD等操作沒問題，也能進行較複雜的關聯(join)，懂設計ER-model。
 
 ## 其他熟悉工具
->Git、VSCode、Android Studio、Excel、HTML、CSS、ExtJs……。
+>Git、VSCode、Android Studio、Excel、HTML、CSS、AJAX、JQuery、ExtJs……。
 
 ## 外語能力
 >日文N2
