@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Design Tokens & Modern Styling (Based on 參考.html)
+   Design Tokens & Modern Styling (炸蝦 🍤 作品集)
    ========================================================================== */
 :root {
   --bg: #090d16;
@@ -16,7 +16,6 @@
   --accent: #f59e0b;
   --purple: #c084fc;
   --crimson: #ef4444;
-  --emerald: #10b981;
 
   --tag-bg: rgba(56, 189, 248, 0.08);
   --tag-border: rgba(56, 189, 248, 0.2);
@@ -46,9 +45,9 @@ body {
   font-family: 'Plus Jakarta Sans', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   background-image: 
-    radial-gradient(circle at 10% 15%, rgba(56, 189, 248, 0.1) 0%, transparent 45%),
-    radial-gradient(circle at 90% 40%, rgba(192, 132, 252, 0.09) 0%, transparent 45%),
-    radial-gradient(circle at 50% 85%, rgba(245, 158, 11, 0.06) 0%, transparent 50%);
+    radial-gradient(circle at 10% 15%, rgba(56, 189, 248, 0.09) 0%, transparent 45%),
+    radial-gradient(circle at 90% 40%, rgba(192, 132, 252, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
   background-attachment: fixed;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -87,51 +86,23 @@ body {
 .container {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 50px 24px 100px;
+  padding: 60px 24px 80px;
   position: relative;
   z-index: 1;
 }
 
 /* ==========================================================================
-   Header & Hero
+   Header & Hero (極簡純淨)
    ========================================================================== */
 header {
-  padding: 40px 0 60px;
+  padding: 20px 0 50px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.status-badge {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  font-size: 0.85rem;
-  font-family: 'JetBrains Mono', monospace;
-  border-radius: var(--radius-pill);
-  background: rgba(34, 197, 94, 0.1);
-  color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.25);
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  background: #22c55e;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #22c55e;
-  animation: pulse 2s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.45; transform: scale(0.85); }
+  gap: 16px;
 }
 
 h1 {
-  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.15;
@@ -140,66 +111,25 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+.shrimp-emoji {
+  -webkit-text-fill-color: initial;
+  background: none;
+  display: inline-block;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.4));
+}
+
 .hero-bio {
   font-size: 1.18rem;
   color: var(--text-muted);
-  max-width: 760px;
+  max-width: 780px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .hero-bio b {
   color: var(--text-main);
   font-weight: 600;
-}
-
-.hero-links {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: var(--transition);
-  cursor: pointer;
-  border: 1px solid transparent;
-  user-select: none;
-}
-
-.btn-primary {
-  background: #38bdf8;
-  color: #080d1a;
-  border-color: #38bdf8;
-}
-
-.btn-primary:hover {
-  background: #7dd3fc;
-  border-color: #7dd3fc;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px var(--primary-glow);
-}
-
-.btn-outline {
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text-main);
-  border-color: var(--card-border);
-}
-
-.btn-outline:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  color: #ffffff;
 }
 
 /* ==========================================================================
@@ -273,13 +203,15 @@ h1 {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), 0 0 30px rgba(56, 189, 248, 0.15);
 }
 
-/* Card Visual Header */
+/* Card Visual Header (點擊試玩 Trigger) */
 .card-thumb {
   width: 100%;
   height: 230px;
   position: relative;
   overflow: hidden;
   background: #080d18;
+  cursor: pointer;
+  user-select: none;
 }
 
 .card-thumb img {
@@ -287,12 +219,13 @@ h1 {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
   display: block;
 }
 
-.project-card:hover .card-thumb img {
-  transform: scale(1.05);
+.card-thumb:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.08);
 }
 
 .thumb-overlay {
@@ -300,6 +233,37 @@ h1 {
   inset: 0;
   background: linear-gradient(180deg, rgba(9, 13, 22, 0.05) 30%, rgba(9, 13, 22, 0.9) 100%);
   pointer-events: none;
+}
+
+/* Hover Hint: ▶ 點擊試玩 */
+.thumb-play-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  background: rgba(9, 13, 22, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 20px var(--primary-glow);
+  transition: var(--transition);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.card-thumb:hover .thumb-play-hint {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .card-type-badge {
@@ -318,6 +282,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-family: 'JetBrains Mono', monospace;
+  z-index: 1;
 }
 
 /* Themed badges */
@@ -392,7 +357,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 26px;
+  margin-top: auto;
 }
 
 .tag {
@@ -404,38 +369,6 @@ h1 {
   padding: 3px 9px;
   border-radius: 6px;
   border: 1px solid var(--tag-border);
-}
-
-/* Card Actions */
-.card-actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: auto;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.btn-play {
-  background: rgba(56, 189, 248, 0.15);
-  color: #7dd3fc;
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  padding: 8px 18px;
-  font-size: 0.88rem;
-  border-radius: 8px;
-}
-
-.btn-play:hover {
-  background: #38bdf8;
-  color: #080d1a;
-  border-color: #38bdf8;
-  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35);
-}
-
-.btn-actions-outline {
-  padding: 8px 16px;
-  font-size: 0.88rem;
-  border-radius: 8px;
 }
 
 /* ==========================================================================
@@ -583,70 +516,11 @@ h1 {
 }
 
 /* ==========================================================================
-   Skills Spectrum Section
-   ========================================================================== */
-.spectrum-section {
-  margin-top: 80px;
-  padding: 40px;
-  background: var(--card-bg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-}
-
-.spectrum-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
-
-.spectrum-desc {
-  color: var(--text-muted);
-  font-size: 0.98rem;
-  margin-bottom: 24px;
-}
-
-.spectrum-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-}
-
-.spectrum-item {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-sm);
-  padding: 20px;
-  transition: var(--transition);
-}
-
-.spectrum-item:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(56, 189, 248, 0.2);
-  transform: translateY(-2px);
-}
-
-.spectrum-item h3 {
-  font-size: 1.05rem;
-  color: var(--primary);
-  margin-bottom: 8px;
-  font-weight: 700;
-}
-
-.spectrum-item p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* ==========================================================================
-   Footer
+   Footer (極簡收尾)
    ========================================================================== */
 footer {
-  margin-top: 100px;
-  padding-top: 36px;
+  margin-top: 60px;
+  padding-top: 32px;
   border-top: 1px solid var(--card-border);
   display: flex;
   justify-content: space-between;

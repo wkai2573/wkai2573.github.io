@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>wkai · 專案作品集 | Creative Developer &amp; Game Craftsman</title>
-  <meta name="description" content="wkai 的個人作品集：專注於 WebGL/Three.js 程序化渲染、原創卡牌對戰引擎、Web Audio 與 WebRTC P2P 多人遊戲。" />
-  <meta name="keywords" content="wkai, 獨立遊戲, WebGL, Three.js, TCG, 卡牌遊戲, 2.5D, WebRTC, PeerJS, 前端工程師" />
-  <meta name="author" content="wkai" />
+  <title>炸蝦 🍤 · 專案作品集 | Creative Developer &amp; Game Craftsman</title>
+  <meta name="description" content="炸蝦 的個人作品集：專注於 WebGL/Three.js 程序化渲染、原創卡牌對戰引擎、Web Audio 與 WebRTC P2P 多人遊戲。" />
+  <meta name="keywords" content="炸蝦, 獨立遊戲, WebGL, Three.js, TCG, 卡牌遊戲, 2.5D, WebRTC, PeerJS, 前端工程師" />
+  <meta name="author" content="炸蝦" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wkai2573.github.io/" />
-  <meta property="og:title" content="wkai · 專案作品集 | Creative Developer &amp; Game Craftsman" />
+  <meta property="og:title" content="炸蝦 🍤 · 專案作品集 | Creative Developer &amp; Game Craftsman" />
   <meta property="og:description" content="專注於 Three.js / WebGL 程序化圖像渲染、自製純函式卡牌遊戲引擎 與 WebRTC P2P 即時對戰。" />
   <meta property="og:image" content="https://wkai2573.github.io/assets/images/lamplighter.png" />
 
-  <!-- Favicon -->
+  <!-- Favicon (炸蝦 🍤) -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
   <!-- Fonts -->
@@ -36,22 +36,11 @@
   <div class="container">
     <!-- Header & Hero -->
     <header>
-      <div class="status-badge">
-        <span class="status-dot"></span> 4 Projects Live on GitHub Pages
-      </div>
-      <h1>Hello, I'm wkai.</h1>
+      <h1>Hello, I'm 炸蝦 <span class="shrimp-emoji">🍤</span>.</h1>
       <p class="hero-bio">
         專注於 <b>Three.js / WebGL 程序化圖像渲染</b>、<b>自製純函式卡牌遊戲引擎</b> 與 <b>WebRTC P2P 即時對戰</b>。<br />
         探索在純網頁邊界內，以零多餘負載打造細膩、精巧且可重現的互動世界與戰術體驗。
       </p>
-      <div class="hero-links">
-        <a href="https://github.com/wkai2573" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <span>🐙 GitHub Profile</span>
-        </a>
-        <a href="./resume/" class="btn btn-outline">
-          <span>📄 個人履歷 Resume</span>
-        </a>
-      </div>
     </header>
 
     <!-- Filter Buttons -->
@@ -67,10 +56,11 @@
 
       <!-- 1. 守燈人 · The Lamplighter -->
       <article class="project-card" data-category="graphics" data-badge="lamplighter">
-        <div class="card-thumb">
+        <div class="card-thumb preview-trigger" data-url="https://wkai2573.github.io/lamplighter/" data-title="守燈人 · The Lamplighter" title="點擊直接試玩 守燈人">
           <img src="assets/images/lamplighter.png" alt="守燈人 · The Lamplighter 遊戲截圖" loading="lazy" decoding="async" />
           <div class="thumb-overlay"></div>
           <span class="card-type-badge">2.5D Atmospheric Adventure</span>
+          <div class="thumb-play-hint">▶ 點擊試玩</div>
         </div>
         <div class="card-body">
           <h2 class="project-title">守燈人 · The Lamplighter</h2>
@@ -88,20 +78,16 @@
             <span class="tag">Procedural Gen</span>
             <span class="tag">Bun</span>
           </div>
-          <div class="card-actions">
-            <a href="https://wkai2573.github.io/lamplighter/" target="_blank" rel="noopener noreferrer" class="btn btn-play">🎮 開啟遊玩</a>
-            <button type="button" class="btn btn-outline btn-actions-outline preview-btn" data-url="https://wkai2573.github.io/lamplighter/" data-title="守燈人 · The Lamplighter">🪟 頁內試玩</button>
-            <a href="https://github.com/wkai2573/lamplighter" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-actions-outline">🐙 源碼</a>
-          </div>
         </div>
       </article>
 
       <!-- 2. 3D微縮場景集 (雨夜便利商店與秋夜旅館) -->
       <article class="project-card" data-category="graphics" data-badge="konbini">
-        <div class="card-thumb">
+        <div class="card-thumb preview-trigger" data-url="https://wkai2573.github.io/3d-miniature-scenes/" data-title="雨夜便利商店與秋夜旅館" title="點擊進入微縮場景">
           <img src="assets/images/konbini.jpg" alt="雨夜便利商店與秋夜旅館 截圖" loading="lazy" decoding="async" />
           <div class="thumb-overlay"></div>
           <span class="card-type-badge">WebGL Miniature Scenes</span>
+          <div class="thumb-play-hint">▶ 進入場景</div>
         </div>
         <div class="card-body">
           <h2 class="project-title">雨夜便利商店與秋夜旅館</h2>
@@ -119,20 +105,16 @@
             <span class="tag">Spatial Audio</span>
             <span class="tag">Interactive Canvas</span>
           </div>
-          <div class="card-actions">
-            <a href="https://wkai2573.github.io/3d-miniature-scenes/" target="_blank" rel="noopener noreferrer" class="btn btn-play">👀 進入場景</a>
-            <button type="button" class="btn btn-outline btn-actions-outline preview-btn" data-url="https://wkai2573.github.io/3d-miniature-scenes/" data-title="雨夜便利商店與秋夜旅館">🪟 頁內預覽</button>
-            <a href="https://github.com/wkai2573/3d-miniature-scenes" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-actions-outline">🐙 源碼</a>
-          </div>
         </div>
       </article>
 
       <!-- 3. 晨昏戰線 Duskline -->
       <article class="project-card" data-category="cards p2p" data-badge="duskline">
-        <div class="card-thumb">
+        <div class="card-thumb preview-trigger" data-url="https://wkai2573.github.io/duskline/" data-title="晨昏戰線 Duskline" title="點擊直接對戰 晨昏戰線">
           <img src="assets/images/duskline.png" alt="晨昏戰線 Duskline 遊戲截圖" loading="lazy" decoding="async" />
           <div class="thumb-overlay"></div>
           <span class="card-type-badge">Deterministic Card Battle</span>
+          <div class="thumb-play-hint">▶ 線上對戰</div>
         </div>
         <div class="card-body">
           <h2 class="project-title">晨昏戰線 Duskline</h2>
@@ -150,20 +132,16 @@
             <span class="tag">Lockstep Protocol</span>
             <span class="tag">Game AI Simulation</span>
           </div>
-          <div class="card-actions">
-            <a href="https://wkai2573.github.io/duskline/" target="_blank" rel="noopener noreferrer" class="btn btn-play">⚔️ 線上對戰</a>
-            <button type="button" class="btn btn-outline btn-actions-outline preview-btn" data-url="https://wkai2573.github.io/duskline/" data-title="晨昏戰線 Duskline">🪟 頁內試玩</button>
-            <a href="https://github.com/wkai2573/duskline" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-actions-outline">🐙 源碼</a>
-          </div>
         </div>
       </article>
 
       <!-- 4. 連擊大師 Combo Master -->
       <article class="project-card" data-category="cards p2p" data-badge="combo">
-        <div class="card-thumb">
+        <div class="card-thumb preview-trigger" data-url="https://wkai2573.github.io/combo-master/" data-title="連擊大師 Combo Master" title="點擊直接試玩 連擊大師">
           <img src="assets/images/combo_master.png" alt="連擊大師 Combo Master 遊戲截圖" loading="lazy" decoding="async" />
           <div class="thumb-overlay"></div>
           <span class="card-type-badge">1v1 Web TCG</span>
+          <div class="thumb-play-hint">▶ 連擊遊玩</div>
         </div>
         <div class="card-body">
           <h2 class="project-title">連擊大師 Combo Master</h2>
@@ -181,46 +159,15 @@
             <span class="tag">Cloudflare Workers / D1</span>
             <span class="tag">Vite</span>
           </div>
-          <div class="card-actions">
-            <a href="https://wkai2573.github.io/combo-master/" target="_blank" rel="noopener noreferrer" class="btn btn-play">🥊 線上遊玩</a>
-            <button type="button" class="btn btn-outline btn-actions-outline preview-btn" data-url="https://wkai2573.github.io/combo-master/" data-title="連擊大師 Combo Master">🪟 頁內試玩</button>
-            <a href="https://github.com/wkai2573/combo-master" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-actions-outline">🐙 源碼</a>
-          </div>
         </div>
       </article>
 
     </div>
 
-    <!-- Skills Spectrum Section -->
-    <section class="spectrum-section">
-      <h2 class="spectrum-title">Engineering Focus · 技術光譜</h2>
-      <p class="spectrum-desc">在瀏覽器技術的邊界內，結合圖形渲染、音訊合成、純函式架構與去中心化網路。</p>
-      
-      <div class="spectrum-grid">
-        <div class="spectrum-item">
-          <h3>程序化渲染與圖像</h3>
-          <p>Three.js, WebGL, 自製 Toon Shader、體積光霧散射、SSAO、動態陰影與粒子系統。堅持極致的輕量與無外部模型負載。</p>
-        </div>
-        <div class="spectrum-item">
-          <h3>純函式規則引擎</h3>
-          <p>不可變狀態轉換（Immutable State）、可重現亂數產生器（RNG Seed）、事件驅動渲染、千局 AI 自我對弈平衡模擬。</p>
-        </div>
-        <div class="spectrum-item">
-          <h3>P2P 連線與邊緣運算</h3>
-          <p>WebRTC / PeerJS 無伺服器雙人連線、Lockstep 鎖步協定、Commit-Reveal 雜湊防作弊、Cloudflare Workers + D1 邊緣資料庫。</p>
-        </div>
-        <div class="spectrum-item">
-          <h3>即時音訊合成</h3>
-          <p>Web Audio API 純程式合成環境音、Karplus-Strong 撥弦演算法生成式配樂、3D 空間定位音場。</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
     <footer>
-      <div>© 2026 wkai · Built with clean HTML &amp; CSS.</div>
+      <div>© 2026 炸蝦 · Built with clean HTML &amp; CSS.</div>
       <div>
-        <a href="./resume/">Resume</a> · 
         <a href="https://github.com/wkai2573" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </footer>
@@ -271,7 +218,7 @@
       });
     });
 
-    // Preview Modal
+    // Preview Modal (點擊封面圖片觸發試玩)
     const modal = document.getElementById('previewModal');
     const modalIframe = document.getElementById('modalIframe');
     const modalTitle = document.getElementById('modalTitle');
@@ -279,10 +226,10 @@
     const closeModal = document.getElementById('closeModal');
     const modalLoader = document.getElementById('modalLoader');
 
-    document.querySelectorAll('.preview-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const url = btn.dataset.url;
-        const title = btn.dataset.title;
+    document.querySelectorAll('.preview-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const url = trigger.dataset.url;
+        const title = trigger.dataset.title;
         modalTitle.textContent = title;
         modalExternalLink.href = url;
         modalLoader.style.display = 'flex';
