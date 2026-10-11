@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>wkai · 專案作品集 | Creative Developer &amp; Game Craftsman</title>
+  <meta name="description" content="wkai 的個人作品集：專注於 WebGL/Three.js 程序化渲染、原創卡牌對戰引擎、Web Audio 與 WebRTC P2P 多人遊戲。" />
+  <meta name="keywords" content="wkai, 獨立遊戲, WebGL, Three.js, TCG, 卡牌遊戲, 2.5D, WebRTC, PeerJS, 前端工程師" />
+  <meta name="author" content="wkai" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wkai2573.github.io/" />
+  <meta property="og:title" content="wkai · 專案作品集 | Creative Developer &amp; Game Craftsman" />
+  <meta property="og:description" content="專注於 Three.js / WebGL 程序化圖像渲染、自製純函式卡牌遊戲引擎 與 WebRTC P2P 即時對戰。" />
+  <meta property="og:image" content="https://wkai2573.github.io/assets/images/lamplighter.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Noise Grid Overlay -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Ambient Interactive Canvas -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <div class="container">
+    <!-- Header & Hero -->
+    <header>
+      <div class="status-badge">
+        <span class="status-dot"></span> 4 Projects Live on GitHub Pages
+      </div>
+      <h1>Hello, I'm wkai.</h1>
+      <p class="hero-bio">
+        專注於 <b>Three.js / WebGL 程序化圖像渲染</b>、<b>自製純函式卡牌遊戲引擎</b> 與 <b>WebRTC P2P 即時對戰</b>。<br />
+        探索在純網頁邊界內，以零多餘負載打造細膩、精巧且可重現的互動世界與戰術體驗。
+      </p>
+      <div class="hero-links">
+        <a href="https://github.com/wkai2573" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <span>🐙 GitHub Profile</span>
+        </a>
+        <a href="./resume/" class="btn btn-outline">
+          <span>📄 個人履歷 Resume</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Filter Buttons -->
+    <div class="filter-bar" role="tablist" aria-label="專案類別篩選">
+      <button class="filter-btn active" data-filter="all">全部專案 (All)</button>
+      <button class="filter-btn" data-filter="graphics">3D / 圖像渲染 (Graphics)</button>
+      <button class="filter-btn" data-filter="cards">策略卡牌對戰 (Card Games)</button>
+      <button class="filter-btn" data-filter="p2p">P2P 即時連線 (WebRTC)</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid">
+
+      <!-- 1. 守燈人 · The Lamplighter -->
+      <article class="project-card" data-category="graphics" data-badge="lamplighter">
+        <div class="card-thumb">
+          <img src="assets/images/lamplighter.png" alt="守燈人 · The Lamplighter 遊戲截圖" loading="lazy" decoding="async" />
+          <div class="thumb-overlay"></div>
+          <span class="card-type-badge">2.5D Atmospheric Adventure</span>
+        </div>
+        <div class="card-body">
+          <h2 class="project-title">守燈人 · The Lamplighter</h2>
+          <p class="project-desc">一段提著燈穿越長夜的 2.5D 橫向卷軸氛圍冒險。世界沉入長夜，你是最後的守燈人，收集螢火補充燈油、驅散暗影，點亮海崖燈塔迎來黎明。</p>
+          <ul class="feature-list">
+            <li class="feature-item">Three.js 窄視角透視真實 3D 視差，點光源陰影隨角色走路擺錘物理搖晃</li>
+            <li class="feature-item">解析積分自製霧氣體積散射（每盞燈的光暈都有真實體積感）、Bloom 與水面 Fresnel 反射</li>
+            <li class="feature-item">Web Audio API 純即時程序化音效、Karplus-Strong 撥弦生成式配樂</li>
+            <li class="feature-item">無任何外部 3D 模型與音訊檔案，整包僅約 780 KB 毫秒級極速啟動</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Three.js</span>
+            <span class="tag">WebGL</span>
+            <span class="tag">Web Audio API</span>
+            <span class="tag">Procedural Gen</span>
+            <span class="tag">Bun</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://wkai2573.github.io/lamplighter/" target="_blank" rel="noopener noreferrer" class="btn btn-play">🎮 開啟遊玩</a>
+            <button type="button" class="btn btn-outline btn-actions-outline preview-btn" data-url="https://wkai2573.github.io/lamplighter/" data-title="守燈人 · The Lamplighter">🪟 頁內試玩</button>
+            <a href="https://github.com/wkai2573/lamplighter" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-actions-outline">🐙 源碼</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. 3D微縮場景集 (雨夜便利商店與秋夜旅館) -->
+      <article class="project-card" data-category="graphics" data-badge="konbini">
+        <div class="card-thumb">
+          <img src="assets/images/konbini.jpg" alt="雨夜便利商店與秋夜旅館 截圖" loading="lazy" decoding="async" />
+          <div class="thumb-overlay"></div>
+          <span class="card-type-badge">WebGL Miniature Scenes</span>
+        </div>
+        <div class="card-body">
+          <h2 class="project-title">雨夜便利商店與秋夜旅館</h2>
+          <p class="project-desc">用 Three.js 手工程式建模的日式微縮場景集。收錄深夜下雨街角的便利商店，以及浮在晚秋夜空的溫泉旅館浮島。</p>
+          <ul class="feature-list">
+            <li class="feature-item">三渲二（Toon Shader 著色＋描邊）與低多邊形＋SSAO 柔和環境光遮蔽渲染</li>
+            <li class="feature-item">動態天候與日夜光影：時間滑桿、晴雨雪切換、路面積水倒影與漸變融雪</li>
+            <li class="feature-item">雙聲道 3D 空間定位環境音（店內入店鈴、屋簷水滴聲隨視角距離與方位切換）</li>
+            <li class="feature-item">所有模型貼圖與動畫純程式產生，零外部模型檔案，零打包步驟原生運行</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Three.js</span>
+            <span class="tag">GLSL Shader</span>
+            <span class="tag">SSAO</span>
+            <span class="tag">Spatial Audio</span>
+            <span class="tag">Interactive Canvas</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://wkai2573.github.io/3d-miniature-scenes/" target="_blank" rel="noopener noreferrer" class="btn btn-play">👀 進入場景</a>
+            <button type="button" class="btn btn-outline btn-actions-outline preview-btn" data-url="https://wkai2573.github.io/3d-miniature-scenes/" data-title="雨夜便利商店與秋夜旅館">🪟 頁內預覽</button>
+            <a href="https://github.com/wkai2573/3d-miniature-scenes" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-actions-outline">🐙 源碼</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. 晨昏戰線 Duskline -->
+      <article class="project-card" data-category="cards p2p" data-badge="duskline">
+        <div class="card-thumb">
+          <img src="assets/images/duskline.png" alt="晨昏戰線 Duskline 遊戲截圖" loading="lazy" decoding="async" />
+          <div class="thumb-overlay"></div>
+          <span class="card-type-badge">Deterministic Card Battle</span>
+        </div>
+        <div class="card-body">
+          <h2 class="project-title">晨昏戰線 Duskline</h2>
+          <p class="project-desc">一局 10～15 分鐘的 1v1 策略卡牌對戰。白晝 ☀ 與黑夜 ☾ 每回合交替，卡片具備晝夜雙攻擊力，雙方在三條戰線上暗牌同時佈署、揭曉自動交戰。</p>
+          <ul class="feature-list">
+            <li class="feature-item">純函式規則引擎：所有狀態變更不可變、亂數種子完全可重現（Deterministic）</li>
+            <li class="feature-item">WebRTC (PeerJS) 免伺服器 P2P 對戰，點擊即開房、無須註冊直接連線</li>
+            <li class="feature-item">Commit-Reveal 雜湊防偷看協定與 Lockstep 鎖步雙向盤面雜湊校驗</li>
+            <li class="feature-item">貪婪 AI 模擬對弈工具，千局模擬分析陣營勝率、平均回合數與先手偏差</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Functional Engine</span>
+            <span class="tag">WebRTC / PeerJS</span>
+            <span class="tag">Lockstep Protocol</span>
+            <span class="tag">Game AI Simulation</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://wkai2573.github.io/duskline/" target="_blank" rel="noopener noreferrer" class="btn btn-play">⚔️ 線上對戰</a>
+            <button type="button" class="btn btn-outline btn-actions-outline preview-btn" data-url="https://wkai2573.github.io/duskline/" data-title="晨昏戰線 Duskline">🪟 頁內試玩</button>
+            <a href="https://github.com/wkai2573/duskline" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-actions-outline">🐙 源碼</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. 連擊大師 Combo Master -->
+      <article class="project-card" data-category="cards p2p" data-badge="combo">
+        <div class="card-thumb">
+          <img src="assets/images/combo_master.png" alt="連擊大師 Combo Master 遊戲截圖" loading="lazy" decoding="async" />
+          <div class="thumb-overlay"></div>
+          <span class="card-type-badge">1v1 Web TCG</span>
+        </div>
+        <div class="card-body">
+          <h2 class="project-title">連擊大師 Combo Master</h2>
+          <p class="project-desc">以連擊值接力出招的 1v1 原創 TCG 網頁卡牌遊戲。具備直觀的節奏判定、即時連線對戰系統與全站雲端匿名戰績庫。</p>
+          <ul class="feature-list">
+            <li class="feature-item">動態戰鬥流程圖系統：戰鬥推進即時高亮「你在這裡」，追擊分支與判定清楚直觀</li>
+            <li class="feature-item">PeerJS 6 碼房號直接連線對戰，主客端狀態同步機制與作弊模式除錯中樞</li>
+            <li class="feature-item">Cloudflare Workers + D1 資料庫：全球匿名戰績雲端儲存與統計伺服器</li>
+            <li class="feature-item">卡表與數值同步管線、機器人壓力測試與牌組連擊值分佈分析工具</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">PeerJS</span>
+            <span class="tag">Cloudflare Workers / D1</span>
+            <span class="tag">Vite</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://wkai2573.github.io/combo-master/" target="_blank" rel="noopener noreferrer" class="btn btn-play">🥊 線上遊玩</a>
+            <button type="button" class="btn btn-outline btn-actions-outline preview-btn" data-url="https://wkai2573.github.io/combo-master/" data-title="連擊大師 Combo Master">🪟 頁內試玩</button>
+            <a href="https://github.com/wkai2573/combo-master" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-actions-outline">🐙 源碼</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Skills Spectrum Section -->
+    <section class="spectrum-section">
+      <h2 class="spectrum-title">Engineering Focus · 技術光譜</h2>
+      <p class="spectrum-desc">在瀏覽器技術的邊界內，結合圖形渲染、音訊合成、純函式架構與去中心化網路。</p>
+      
+      <div class="spectrum-grid">
+        <div class="spectrum-item">
+          <h3>程序化渲染與圖像</h3>
+          <p>Three.js, WebGL, 自製 Toon Shader、體積光霧散射、SSAO、動態陰影與粒子系統。堅持極致的輕量與無外部模型負載。</p>
+        </div>
+        <div class="spectrum-item">
+          <h3>純函式規則引擎</h3>
+          <p>不可變狀態轉換（Immutable State）、可重現亂數產生器（RNG Seed）、事件驅動渲染、千局 AI 自我對弈平衡模擬。</p>
+        </div>
+        <div class="spectrum-item">
+          <h3>P2P 連線與邊緣運算</h3>
+          <p>WebRTC / PeerJS 無伺服器雙人連線、Lockstep 鎖步協定、Commit-Reveal 雜湊防作弊、Cloudflare Workers + D1 邊緣資料庫。</p>
+        </div>
+        <div class="spectrum-item">
+          <h3>即時音訊合成</h3>
+          <p>Web Audio API 純程式合成環境音、Karplus-Strong 撥弦演算法生成式配樂、3D 空間定位音場。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>© 2026 wkai · Built with clean HTML &amp; CSS.</div>
+      <div>
+        <a href="./resume/">Resume</a> · 
+        <a href="https://github.com/wkai2573" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Preview Modal (Iframe Embed) -->
+  <div class="modal-overlay" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span style="color: var(--primary);">●</span>
+          <span id="modalTitle">Live Preview</span>
+        </div>
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" id="modalExternalLink" class="btn-popout">在新分頁開啟 ↗</a>
+          <button type="button" class="btn-close" id="closeModal" aria-label="關閉彈窗">×</button>
+        </div>
+      </div>
+      <div class="modal-iframe-wrap">
+        <div class="modal-loader" id="modalLoader">
+          <div class="spinner"></div>
+          <div>載入遊戲體驗中……</div>
+        </div>
+        <iframe class="modal-iframe" id="modalIframe" src="about:blank" allow="autoplay; fullscreen; accelerometer; gyroscope"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Category Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Preview Modal
+    const modal = document.getElementById('previewModal');
+    const modalIframe = document.getElementById('modalIframe');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalExternalLink = document.getElementById('modalExternalLink');
+    const closeModal = document.getElementById('closeModal');
+    const modalLoader = document.getElementById('modalLoader');
+
+    document.querySelectorAll('.preview-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const url = btn.dataset.url;
+        const title = btn.dataset.title;
+        modalTitle.textContent = title;
+        modalExternalLink.href = url;
+        modalLoader.style.display = 'flex';
+
+        modalIframe.onload = () => {
+          modalLoader.style.display = 'none';
+        };
+
+        modalIframe.src = url;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function hideModal() {
+      modal.classList.remove('active');
+      modalIframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+
+    closeModal.addEventListener('click', hideModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) hideModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        hideModal();
+      }
+    });
+
+    // Ambient Starfield Canvas
+    (function initCanvas() {
+      const canvas = document.getElementById('ambient-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w = (canvas.width = window.innerWidth);
+      let h = (canvas.height = window.innerHeight);
+
+      window.addEventListener('resize', () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      });
+
+      const count = Math.min(Math.floor((w * h) / 22000), 50);
+      const particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: (Math.random() - 0.5) * 0.35,
+          r: Math.random() * 1.5 + 0.6,
+          a: Math.random() * 0.45 + 0.15
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0) p.x = w;
+          if (p.x > w) p.x = 0;
+          if (p.y < 0) p.y = h;
+          if (p.y > h) p.y = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(56, 189, 248, ${p.a})`;
+          ctx.fill();
+
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+            if (dist < 100) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = `rgba(56, 189, 248, ${0.1 * (1 - dist / 100)})`;
+              ctx.lineWidth = 0.6;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+      requestAnimationFrame(draw);
+    })();
+  </script>
+</body>
+</html>
