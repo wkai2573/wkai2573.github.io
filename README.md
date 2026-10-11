@@ -1,7 +1,6 @@
-# 炸蝦 🍤 · 專案作品集
+# 炸蝦 🍤 · 作品集
 
-> Creative Developer & Game Craftsman
-> 專注於 Three.js / WebGL 程序化圖像渲染、自製純函式卡牌遊戲引擎 與 WebRTC P2P 即時對戰。
+> 我是炸蝦，小小開發者。做興趣主導的專案，沒有用特定的技術。一切都問 AI，好愛 Agent。
 
 🌐 **線上訪問**：[https://wkai2573.github.io/](https://wkai2573.github.io/)
 
