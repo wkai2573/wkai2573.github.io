@@ -203,8 +203,10 @@ h1 {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), 0 0 30px rgba(56, 189, 248, 0.15);
 }
 
-/* Card Visual Header (點擊試玩 Trigger) */
+/* Card Visual Header (另開新分頁) */
 .card-thumb {
+  display: block;
+  text-decoration: none;
   width: 100%;
   height: 230px;
   position: relative;
@@ -212,6 +214,11 @@ h1 {
   background: #080d18;
   cursor: pointer;
   user-select: none;
+}
+
+.card-thumb:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
 }
 
 .card-thumb img {
@@ -319,6 +326,22 @@ h1 {
   line-height: 1.3;
 }
 
+.project-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.project-title a:hover {
+  color: var(--primary);
+}
+
+.project-title a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 .project-desc {
   font-size: 0.95rem;
   color: var(--text-muted);
@@ -371,149 +394,7 @@ h1 {
   border: 1px solid var(--tag-border);
 }
 
-/* ==========================================================================
-   Preview Modal (Iframe Embed)
-   ========================================================================== */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(5, 8, 15, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 24px;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
 
-.modal-overlay.active {
-  display: flex;
-  opacity: 1;
-}
-
-.modal-box {
-  background: #0d1322;
-  border: 1px solid var(--card-border);
-  border-radius: 20px;
-  width: 100%;
-  max-width: 1100px;
-  height: 88vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 35px rgba(56, 189, 248, 0.15);
-  position: relative;
-  transform: scale(0.96);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.modal-overlay.active .modal-box {
-  transform: scale(1);
-}
-
-.modal-header {
-  padding: 14px 24px;
-  border-bottom: 1px solid var(--card-border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(13, 19, 34, 0.95);
-  z-index: 2;
-}
-
-.modal-title {
-  font-weight: 700;
-  font-size: 1.05rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #ffffff;
-}
-
-.modal-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.btn-popout {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 0.88rem;
-  padding: 5px 12px;
-  border-radius: 6px;
-  border: 1px solid var(--card-border);
-  background: rgba(255, 255, 255, 0.03);
-  transition: var(--transition);
-}
-
-.btn-popout:hover { 
-  color: #fff; 
-  border-color: rgba(255,255,255,0.25);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.btn-close {
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  font-size: 1.6rem;
-  cursor: pointer;
-  line-height: 1;
-  padding: 4px 8px;
-  border-radius: 6px;
-  transition: var(--transition);
-}
-
-.btn-close:hover { 
-  color: #ef4444; 
-  background: rgba(239, 68, 68, 0.15);
-}
-
-.modal-iframe-wrap {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #000;
-}
-
-.modal-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: #000;
-  display: block;
-}
-
-.modal-loader {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #090e18;
-  color: var(--text-muted);
-  gap: 12px;
-  font-size: 0.9rem;
-  z-index: 1;
-}
-
-.spinner {
-  width: 32px;
-  height: 32px;
-  border: 3px solid rgba(56, 189, 248, 0.2);
-  border-top-color: var(--primary);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
 
 /* ==========================================================================
    Footer (極簡收尾)
